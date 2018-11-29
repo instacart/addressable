@@ -4671,7 +4671,7 @@ describe Addressable::URI, "when parsed from '?one=1&two=2&three=3'" do
 
   it "should raise an error for invalid return type values" do
     expect(lambda do
-      @uri.query_values(Fixnum)
+      @uri.query_values(Integer)
     end).to raise_error(ArgumentError)
   end
 
@@ -5476,7 +5476,7 @@ describe Addressable::URI, "when parsing a non-String object" do
   it "should raise a TypeError for objects than cannot be converted" do
     expect(lambda do
       Addressable::URI.parse(42)
-    end).to raise_error(TypeError, "Can't convert Fixnum into String.")
+    end).to raise_error(TypeError, "Can't convert Integer into String.")
   end
 
   it "should correctly parse heuristically anything with a 'to_str' method" do
@@ -5486,7 +5486,7 @@ describe Addressable::URI, "when parsing a non-String object" do
   it "should raise a TypeError for objects than cannot be converted" do
     expect(lambda do
       Addressable::URI.heuristic_parse(42)
-    end).to raise_error(TypeError, "Can't convert Fixnum into String.")
+    end).to raise_error(TypeError, "Can't convert Integer into String.")
   end
 end
 
@@ -5532,7 +5532,7 @@ describe Addressable::URI, "when form encoding a non-Array object" do
   it "should raise a TypeError for objects than cannot be converted" do
     expect(lambda do
       Addressable::URI.form_encode(42)
-    end).to raise_error(TypeError, "Can't convert Fixnum into Array.")
+    end).to raise_error(TypeError, "Can't convert Integer into Array.")
   end
 end
 
@@ -5600,7 +5600,7 @@ describe Addressable::URI, "when form unencoding a non-String object" do
   it "should raise a TypeError for objects than cannot be converted" do
     expect(lambda do
       Addressable::URI.form_unencode(42)
-    end).to raise_error(TypeError, "Can't convert Fixnum into String.")
+    end).to raise_error(TypeError, "Can't convert Integer into String.")
   end
 end
 
@@ -5612,7 +5612,7 @@ describe Addressable::URI, "when normalizing a non-String object" do
   it "should raise a TypeError for objects than cannot be converted" do
     expect(lambda do
       Addressable::URI.normalize_component(42)
-    end).to raise_error(TypeError, "Can't convert Fixnum into String.")
+    end).to raise_error(TypeError, "Can't convert Integer into String.")
   end
 
   it "should raise a TypeError for objects than cannot be converted" do

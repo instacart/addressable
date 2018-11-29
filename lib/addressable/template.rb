@@ -150,7 +150,7 @@ module Addressable
       ##
       # Accesses captured values by name or by index.
       #
-      # @param [String, Symbol, Fixnum] key
+      # @param [String, Symbol, Integer] key
       #   Capture index or name. Note that when accessing by with index
       #   of 0, the full URI will be returned. The intention is to mimic
       #   the ::MatchData#[] behavior.
@@ -194,7 +194,7 @@ module Addressable
 
       # Returns multiple captured values at once.
       #
-      # @param [String, Symbol, Fixnum] *indexes
+      # @param [String, Symbol, Integer] *indexes
       #   Indices of the captures to be returned
       #
       # @return [Array]
